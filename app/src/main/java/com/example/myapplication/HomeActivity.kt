@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
         val signInLink = findViewById<TextView>(R.id.signInLink)
         signInLink.setOnClickListener({
-            startActivity(Intent(this, SigninActivity::class.java))
+            startActivity(Intent(this, SignInActivity::class.java))
         })
 
 
