@@ -25,11 +25,12 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="343dp"
-        android:layout_height="63dp"
+        android:layout_width="412dp"
+        android:layout_height="67dp"
         android:layout_marginTop="224dp"
         android:fontFamily="@font/aldrich"
         android:text="@string/create_account"
+        android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
