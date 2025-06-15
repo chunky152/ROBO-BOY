@@ -18,9 +18,10 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
             android:background="@color/purple"
             android:elevation="30dp"
+            android:textAlignment="center"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:subtitle="WELCOME USER 101"
@@ -30,7 +31,22 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container" />
+            android:id="@+id/fragment_container" >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="482dp"
+                app:srcCompat="@drawable/computer" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="74dp"
+                android:text="These are your account details"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+        </FrameLayout>
 
     </LinearLayout>
 

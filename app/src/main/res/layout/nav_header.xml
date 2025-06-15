@@ -16,7 +16,7 @@
     <TextView
         android:layout_width="144dp"
         android:layout_height="33dp"
-        android:text="@string/robo_boy"
+        android:text="USER 101"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />

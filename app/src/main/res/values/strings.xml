@@ -31,4 +31,5 @@
     <string name="about">about</string>
     <string name="log_out">log_out</string>
     <string name="robo_boy">ROBO-BOY</string>
+    <string name="signin">SignIn</string>
 </resources>
