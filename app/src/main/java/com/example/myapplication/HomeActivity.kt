@@ -24,6 +24,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, SignInActivity::class.java))
         })
 
+        val submit = findViewById<TextView>(R.id.button)
+        submit.setOnClickListener({
+            startActivity(Intent(this, NavigationDrawer::class.java))
+        })
 
     }
 }

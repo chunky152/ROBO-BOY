@@ -8,20 +8,20 @@
 
         <item
             android:id="@+id/nav_home"
-            android:title="@string/home"
+            android:title="Home"
             android:icon="@drawable/ic_home" />
         <item
             android:id="@+id/nav_share"
-            android:title="@string/share"
-            android:icon="@drawable/ic_home" />
+            android:title="Share"
+            android:icon="@drawable/ic_share" />
         <item
             android:id="@+id/nav_settings"
-            android:title="@string/settings"
-            android:icon="@drawable/ic_home" />
+            android:title="Settings"
+            android:icon="@drawable/ic_settings" />
         <item
             android:id="@+id/nav_about"
-            android:title="@string/about"
-            android:icon="@drawable/ic_home" />
+            android:title="About"
+            android:icon="@drawable/ic_info" />
     </group>
 
     <item
@@ -30,7 +30,7 @@
             <item
                 android:id="@+id/nav_logout"
                 android:title="@string/log_out"
-                android:icon="@drawable/ic_home" />
+                android:icon="@drawable/ic_logout" />
         </menu>
     </item>
 </menu>
