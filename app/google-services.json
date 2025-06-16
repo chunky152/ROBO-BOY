@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "274284779065",
+    "project_id": "robo-boy",
+    "storage_bucket": "robo-boy.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274284779065:android:db8c60b56497074c155fe8",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfuGttCOVyVkL2i3Dp26PvW8bl0h2OxfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
