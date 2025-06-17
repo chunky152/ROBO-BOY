@@ -25,7 +25,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="778dp"
             android:layout_weight="1"
             android:padding="16dp">
 
@@ -37,35 +37,35 @@
                 android:text="Welcome, Alvin 👋"
                 android:textSize="22sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <!-- Subtext -->
             <TextView
                 android:id="@+id/subtext"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Here are your smart tools"
                 android:textSize="16sp"
-                app:layout_constraintTop_toBottomOf="@id/welcomeText"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="8dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcomeText" />
 
             <!-- AI Quick Input (Chat/Voice) -->
             <EditText
                 android:id="@+id/ai_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Ask your AI assistant..."
-                android:drawableStart="@android:drawable/ic_btn_speak_now"
-                android:padding="12dp"
+                android:layout_marginTop="16dp"
                 android:background="@color/white"
-                app:layout_constraintTop_toBottomOf="@id/subtext"
-                app:layout_constraintStart_toStartOf="parent"
+                android:drawableStart="@android:drawable/ic_btn_speak_now"
+                android:hint="Ask your AI assistant..."
+                android:padding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/subtext" />
 
             <!-- Navigation Cards -->
             <androidx.gridlayout.widget.GridLayout
@@ -88,8 +88,8 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
                     app:cardBackgroundColor="#9BC09C"
+                    app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
 
@@ -120,9 +120,9 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="8dp"
+                    app:cardBackgroundColor="#0E2148"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
-                    app:cardBackgroundColor="#0E2148"
                     app:layout_columnWeight="1">
 
                     <LinearLayout
@@ -151,9 +151,9 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="8dp"
+                    app:cardBackgroundColor="@color/purple"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
-                    app:cardBackgroundColor="@color/purple"
                     app:layout_columnWeight="1">
 
                     <LinearLayout
@@ -182,8 +182,8 @@
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_margin="8dp"
-                    app:cardCornerRadius="16dp"
                     app:cardBackgroundColor="#E3D095"
+                    app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
                     app:layout_columnWeight="1">
 
