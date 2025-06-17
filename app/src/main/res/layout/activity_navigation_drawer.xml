@@ -151,6 +151,7 @@
                     android:layout_margin="8dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="6dp"
+                    app:cardBackgroundColor="@color/purple"
                     app:layout_columnWeight="1">
 
                     <LinearLayout
