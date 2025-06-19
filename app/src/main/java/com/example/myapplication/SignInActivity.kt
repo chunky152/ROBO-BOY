@@ -2,9 +2,9 @@ package com.example.myapplication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,15 +17,17 @@ class SignInActivity : AppCompatActivity() {
         setContentView(R.layout.activity_signin)
         val auth: FirebaseAuth = FirebaseAuth.getInstance()
         findViewById<Button>(R.id.signIn).setOnClickListener {
-            val email = findViewById<EditText>(R.id.email).text.toString()
-            val password = findViewById<EditText>(R.id.password).text.toString()
+            val email = findViewById<EditText>(R.id.email).text.toString().trim()
+            val password = findViewById<EditText>(R.id.password).text.toString().trim()
 
-            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
-                if (it.isSuccessful) {
-                    startActivity(Intent(this, HomeActivity::class.java))
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task->
+                if (task.isSuccessful) {
+                    startActivity(Intent(this, NavigationDrawer::class.java))
                     finish()
                 } else {
-                    Toast.makeText(this, "Login Failed", Toast.LENGTH_SHORT).show()
+                    val message = task.exception?.localizedMessage ?: "Login Failed"
+                    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+                    Log.e("AUTH", "Error logging in", task.exception)
                 }
 
             }
