@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/robot" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/email"
         android:layout_width="293dp"
         android:layout_height="52dp"
         android:layout_marginTop="296dp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/password"
         android:layout_width="291dp"
         android:layout_height="56dp"
         android:layout_marginTop="416dp"
