@@ -29,15 +29,16 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent(this, SignInActivity::class.java))
         })
 
-        val username = findViewById<EditText>(R.id.username).text.toString().trim()
-        val email = findViewById<EditText>(R.id.email).text.toString().trim()
-        val password = findViewById<EditText>(R.id.password).text.toString().trim()
         val submit = findViewById<TextView>(R.id.button)
-
-
         submit.setOnClickListener {
+            val username = findViewById<EditText>(R.id.username).text.toString().trim()
+            val email = findViewById<EditText>(R.id.email).text.toString().trim()
+            val password = findViewById<EditText>(R.id.password).text.toString().trim()
+            if (username.isEmpty() || email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
             registerUser(username, email, password)
-            startActivity(Intent(this, NavigationDrawer::class.java))
         }
     }
 
@@ -50,12 +51,13 @@ class HomeActivity : AppCompatActivity() {
                     val user = auth.currentUser
                     val userMap = hashMapOf(
                         "username" to username,
-                        "email" to email,
-                        "password" to password
+                        "email" to email
                     )
                     db.collection("users").document(user!!.uid).set(userMap)
                         .addOnSuccessListener {
                             Toast.makeText(this, "Registration Successful", Toast.LENGTH_SHORT).show()
+                            startActivity(Intent(this, NavigationDrawer::class.java))
+                            finish()
                         }
                         .addOnFailureListener {
                             Toast.makeText(this, "Registration Failed", Toast.LENGTH_SHORT).show()
